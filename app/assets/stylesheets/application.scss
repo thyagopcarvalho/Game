@@ -1,0 +1,26 @@
+@import "materialize/components/color-variables";
+$primary-color: color("blue", "lighten-3") !default;
+// $secondary-color: color("yellow", "lighten-3") !default;
+@import "materialize";
+@import "material_icons";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+// p{
+//     text-align: center;
+//     text-transform: capitalize;
+// }
+// a{
+//     font-size: 50px;
+// }
+// h2{
+//     color: aqua;
+// }
+h1.centralizado{
+    text-align: center;
+}
+a.botoes-inicias{
+    height: 50px;
+    width: 400px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 30px
+}

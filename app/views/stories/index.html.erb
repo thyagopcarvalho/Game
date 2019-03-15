@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col s12 center-align"><h1>Histórias</h1></div>
+  <div class="col s12"><p> Por enquanto temos apenas <%=@stories.count%> histórias para serem jogadas</p></div>
+  <div class="divider"></div>
+  <div class="section">
+    <% @stories.each do |story| %>
+      <div class="col s2 center-align">
+        <%=story.titulo%>
+      </div>
+    <%end%>
+  </div>
+</div>

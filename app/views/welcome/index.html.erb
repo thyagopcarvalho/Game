@@ -1,0 +1,13 @@
+<h1 class="centralizado">Braille game</h1>
+<div class="row">
+    <div class="col s6 center-align">
+        <%= link_to new_story_path do %>
+            <%= content_tag :span, "Criar história", class:"waves-effect waves-light btn botoes-inicias" %>
+        <% end %>
+    </div>
+    <div class="col s6 center-align">
+        <%= link_to stories_path do %>
+            <%= content_tag :span, "Jogar", class:"waves-effect waves-light btn botoes-inicias" %>
+        <% end %>
+    </div>
+</div>
