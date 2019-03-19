@@ -10,19 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_15_125005) do
+ActiveRecord::Schema.define(version: 2019_03_19_143719) do
 
   create_table "paths", force: :cascade do |t|
     t.integer "caminho"
     t.string "opcao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "scene_id"
+    t.index ["scene_id"], name: "index_paths_on_scene_id"
   end
 
   create_table "scenes", force: :cascade do |t|
     t.text "texto"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "story_id"
+    t.index ["story_id"], name: "index_scenes_on_story_id"
   end
 
   create_table "stories", force: :cascade do |t|

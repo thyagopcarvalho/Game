@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 
-gem 'simple_form', '4.1.0'
+# gem 'simple_form', '4.1.0'
 gem 'haml', '5.0.4'
 gem 'devise', '4.6.1'
 
@@ -48,7 +48,7 @@ gem 'rspec-rails'
 
 gem "aws-sdk-s3", require: false
 
-gem 'google-api-client', '~> 0.11'
+gem "espeak-ruby", require: "espeak"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

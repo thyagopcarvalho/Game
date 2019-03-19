@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Introducao:</strong>
-  <%= @story.introducao %>
-</p>
-
-<%= link_to 'Edit', edit_story_path(@story) %> |
-<%= link_to 'Back', stories_path %>
+<div class= "row">
+    <div class="col s12 box-texto"><p class="text"><%=@story.introducao%></p></div>
+    <div class="col s6 center-align">
+        <%= link_to @storie.scene do %>
+            <%= content_tag :span, "Iniciar aventura", class:"waves-effect waves-light btn botoes-inicias" %>
+        <% end %>
+    </div>
+</div>
