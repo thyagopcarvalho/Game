@@ -1,0 +1,31 @@
+@import "materialize/components/color-variables";
+$primary-color: color("blue", "lighten-3") !default;
+// $secondary-color: color("yellow", "lighten-3") !default;
+@import "materialize";
+@import "material_icons";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+p.texto{
+    font-size: 50px;
+}
+.enter-braille-cell{
+    width: 100%;
+    height: 100%;
+}
+h1.centralizado{
+    text-align: center;
+}
+a.botoes-inicias{
+    height: 50px;
+    width: 400px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 30px
+}
+div.box-texto{
+    border: 5px;
+    border-color: aqua;
+}
+.div-cards-stories {
+    @extend .col;
+    @extend .s4;
+}

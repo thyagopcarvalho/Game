@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<div class= "row">
+    <div class="col s12 box-texto">
+        <p class="text" id="texto">
+            <%=@story.introducao%>
+            <%# <script> %>
+                <%# typeWriter(<%=@story.introducao) %>
+            <%# </script> %>
+        </p>
+    </div>
+    <div class="col s12 center-align">
+        <%if @story.scenes.empty?%>
+            <%= link_to stories_path do %>
+                <%= content_tag :span, "Voltar", class:"waves-effect waves-light btn botoes-inicias" %>
+            <% end %>
+        <%else%>
+            <%= link_to story_scene_path(@story, @scene) do %>
+                <%= content_tag :span, "Iniciar aventura", class:"waves-effect waves-light btn botoes-inicias" %>
+            <% end %>
+        <%end%>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<header><h1 class="centralizado">Braille game</h1></header>
+<div class="row">
+  <div class="col s12 center-align"><h4>Histórias</h4></div>
+    <% @stories.each do |story| %>
+      <div class="col s4">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title"><%=story.titulo%></span>
+          </div>
+          <div class="card-action">
+            <%= link_to story do %>
+              <%= content_tag :span, "Jogar", class:"waves-effect waves-light btn" %>
+            <% end %>
+            <%= link_to edit_story_path(story) do %>
+              <%= content_tag :span, "Editar", class:"waves-effect waves-light btn" %>
+            <% end %>
+            <%= link_to story_path(story), method: :delete do %>
+              <%= content_tag :span, "Deletar", class:"waves-effect waves-light btn" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <%end%>
+  </div>
+</div>
+<div class="row">
+    <div class="col s12 center-align">
+        <%= link_to new_story_path do %>
+            <%= content_tag :span, "Nova história", class:"waves-effect waves-light btn botoes-inicias" %>
+        <% end %>
+    </div>
+</div>

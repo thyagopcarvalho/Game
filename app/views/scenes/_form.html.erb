@@ -1,0 +1,10 @@
+<%=form_for([@story,@scene]) do |form|%>
+  <div class="field">
+    <%= form.label :texto %>
+    <%= form.text_area :texto %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
