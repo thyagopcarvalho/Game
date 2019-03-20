@@ -1,0 +1,13 @@
+<footer>
+  <%=form_tag({:action => 'next'}, {:id => 'scene_id'}) do %>
+    <div class="row center-align footer div-form-braillecell">
+      <div class="col s6"><label><input type="checkbox" name = "b1" id="brailleCell1"/><span>B1</span></label></div>
+      <div class="col s6"><label><input type="checkbox" name = "b2" id="brailleCell2"/><span>B2</span></label></div>
+      <div class="col s6"><label><input type="checkbox" name = "b3" id="brailleCell3"/><span>B3</span></label></div>
+      <div class="col s6"><label><input type="checkbox" name = "b4" id="brailleCell4"/><span>B4</span></label></div>
+      <div class="col s6"><label><input type="checkbox" name = "b5" id="brailleCell5"/><span>B5</span></label></div>
+      <div class="col s6"><label><input type="checkbox" name = "b6" id="brailleCell6"/><span>B6</span></label></div>
+      <div class="col s12"><label><input type="submit" value ="Enter" class="btn enter-braille-cell"/></label></div>
+    <div>
+  <%end%>
+</footer>
