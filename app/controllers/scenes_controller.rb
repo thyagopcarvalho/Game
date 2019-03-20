@@ -56,9 +56,24 @@ class ScenesController < ApplicationController
   end
 
   def next
-    @path = @scene.path
-
-    redirect_to story_scene_path(2)
+    @b1 = params[:b1]
+    @b2 = params[:b2]
+    @b3 = params[:b3]
+    @b4 = params[:b4]
+    @b5 = params[:b5]
+    @b6 = params[:b6]
+    @path = @scene.paths
+    print(@path.empty?)
+    @story = Story.find(params[:story_id])
+    if @b1 == "on"
+      redirect_to story_scene_path(@story, 1)
+    elsif @b3 == "on"
+      redirect_to story_scene_path(@story, 2)
+    elsif @b5 == "on"
+      redirect_to story_scene_path(@story, 3)
+    else
+      redirect_to story_path(@story)
+    end
   end
   # def show_start_scene
   #   @story = Story.find(params[:story_id])
