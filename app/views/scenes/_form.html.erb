@@ -1,16 +1,4 @@
-<%= form_with(model: scene, local: true) do |form| %>
-  <% if scene.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(scene.errors.count, "error") %> prohibited this scene from being saved:</h2>
-
-      <ul>
-      <% scene.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%=form_for([@story,@scene]) do |form|%>
   <div class="field">
     <%= form.label :texto %>
     <%= form.text_area :texto %>

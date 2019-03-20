@@ -14,3 +14,13 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+var i = 0;
+var speed = 50;
+
+function typeWriter(texto) {
+  if (i < texto.length) {
+    document.getElementById("texto").innerHTML += texto.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
